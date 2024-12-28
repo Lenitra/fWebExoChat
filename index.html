@@ -3,13 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Café Chat</title>
 
     <link rel="stylesheet" href="style.css">
-
-    <!-- autorefresh -->
-    <!-- <meta http-equiv="refresh" content="1"> -->
 </head>
 
 <body>
@@ -17,72 +13,57 @@
         <h1>Café Chat</h1>
         <h2>un café - un chat<br>un caféchat</h2>
         <div class="images-chat">
-            <img src="chat1.jpg" alt="Image de chat">
-            <img src="chat2.jpg" alt="Image de chat">
+            <img src="assets/chat1.jpg" alt="Image de chat">
+            <img src="assets/chat2.jpg" alt="Image de chat">
         </div>
     </header>
 
-    
     <main>
         <nav class="menu">
-            <a href="#dessert">Dessert</a>
-            <a href="#cocktail">Cocktail</a>
-            <a href="#coffee">Coffee</a>
-            <a href="#menu">Menu</a>
+            <button data-iframe="desserts.html">Dessert</button>
+            <button data-iframe="cocktail.html">Cocktail</button>
+            <button data-iframe="coffee.html">Café</button>
+            <button data-iframe="menu.html">Menu</button>
         </nav>
 
-        <section id="dessert">
-            <h3>Desserts</h3>
-            <p>Découvrez nos desserts faits maison :</p>
-            <ul>
-                <li>Tarte au citron meringuée</li>
-                <li>Fondant au chocolat</li>
-                <li>Macarons assortis</li>
-                <li>Cheesecake au coulis de framboise</li>
-            </ul>
-        </section>
-
-        <section id="cocktail">
-            <h3>Cocktails</h3>
-            <p>Nos cocktails exclusifs pour accompagner votre moment de détente :</p>
-            <ul>
-                <li>Mojito Classique</li>
-                <li>Sangria Maison</li>
-                <li>Martini Espresso</li>
-                <li>Mocktail Tropical (sans alcool)</li>
-            </ul>
-        </section>
-
-        <section id="coffee">
-            <h3>Cafés</h3>
-            <p>Une sélection de cafés pour tous les goûts :</p>
-            <ul>
-                <li>Espresso</li>
-                <li>Cappuccino</li>
-                <li>Latte Macchiato</li>
-                <li>Cold Brew</li>
-            </ul>
-        </section>
-
-        <section id="menu">
-            <h3>Menu</h3>
-            <p>Explorez notre menu complet :</p>
-            <ul>
-                <li><strong>Entrées :</strong> Salades fraîches, Soupe du jour</li>
-                <li><strong>Plats :</strong> Burger maison, Quiche lorraine, Raviolis végétariens</li>
-                <li><strong>Boissons :</strong> Thé glacé, Smoothies, Jus pressés</li>
-            </ul>
-        </section>
+        <iframe id="contentIframe" src="desserts.html" title="Contenu"></iframe>
     </main>
 
     <footer>
-        <p>© 2024 Café Chat. Tous droits réservés.</p>
-        <p>Contactez-nous : <a href="mailto:contact@cafechat.fr">contact@cafechat.fr</a></p>
-        <p>Suivez-nous sur :
-            <a href="https://facebook.com/cafechat">Facebook</a>,
-            <a href="https://instagram.com/cafechat">Instagram</a>
+        <p>Heures d'ouverture : Lundi - Dimanche : 9h00 - 22h00</p>
+        <p>Contact : <a href="mailto:info@cafechat.com">info@cafechat.com</a> | Téléphone : +33 1 23 45 67 89</p>
+        <p>Suivez-nous :
+            <a href="#">Facebook</a> |
+            <a href="#">Instagram</a> |
+            <a href="#">Twitter</a>
         </p>
+        <p>Adresse : 123 Rue des Chats, 75000 Paris, France</p>
     </footer>
+
+
+
+    <!-- script permettant de changer la source de l'iframe en fonction du bouton cliqué -->
+    <script>
+        // Sélectionne tous les boutons et l'iframe
+        const buttons = document.querySelectorAll('.menu button');
+        const iframe = document.getElementById('contentIframe');
+
+        // Ajoute un événement "click" à chaque bouton
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Récupère la source à charger depuis l'attribut data-iframe
+                const iframeSrc = button.getAttribute('data-iframe');
+
+                // Change la source de l'iframe
+                iframe.src = iframeSrc;
+            });
+        });
+
+
+
+    </script>
+
+
 </body>
 
 </html>
