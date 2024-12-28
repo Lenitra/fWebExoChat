@@ -73,8 +73,8 @@ nav button {
     margin: 10px;
     border-radius: 50%;
     background-color: #ff000071;
-    width: calc(20vw - 20px);
-    height: calc(20vw - 20px);
+    width: 10vw;
+    height: 10vw;
     display: flex;
     justify-content: center;
     align-items: center;
