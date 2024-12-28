@@ -56,13 +56,37 @@ nav {
 nav a {
     text-align: center;
     text-decoration: none;
-    color: #000;
+    color: #ffffff;
+    text-shadow: #000 1px 1px 1px;
     font-size: 1.5em;
     margin: 10px;
     border-radius: 50%;
     background-color: #ff000071;
     width: calc(20vw - 20px);
     height: calc(20vw - 20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a:nth-child(1) {
+    background-image: url("assets/dessert.jpg");
+    background-size: cover;
+}
+
+nav a:nth-child(2) {
+    background-image: url("assets/cocktail.jpg");
+    background-size: cover;
+}
+
+nav a:nth-child(3) {
+    background-image: url("assets/cafe.jpg");
+    background-size: cover;
+}
+
+nav a:nth-child(4) {
+    background-image: url("assets/menu.jpg");
+    background-size: cover;
 }
 
 /* #endregion */
